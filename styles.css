@@ -1,2 +1,47 @@
-
 /* Your CSS Code here. */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.player__button, .skip {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.player__button:hover, .skip:hover {
+    background: #555;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    margin: 0 10px;
+    position: relative;
+}
+
+.progress__filled {
+    height: 100%;
+    width: 0;
+    background: #ff0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
