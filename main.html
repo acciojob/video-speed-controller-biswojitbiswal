@@ -8,10 +8,10 @@
 <body>
 
   <div class="wrapper">
-        <video class="video" width="765" height="430" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <video class="player__video" width="765" height="430" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
         <div class="controls">
-            <button class="player__button">►</button>
-            <button class="skip" data-skip="-10">« 10s</button>
+            <button class="player__button toggle">►</button>
+            <button class="skip rewind" data-skip="-10">« 10s</button>
             <button class="skip" data-skip="25">25s »</button>
             <input type="range" name="volume" class="volume" min="0" max="1" step="0.05" value="0.75">
             <input type="range" name="playbackSpeed" class="playback-speed" min="0.5" max="2" step="0.1" value="1">
@@ -23,8 +23,8 @@
 
 <script  src="./script.js">
   //Your code goes here
-	const video = document.querySelector('.video');
-const playButton = document.querySelector('.player__button');
+	const video = document.querySelector('.player__video');
+const playButton = document.querySelector('.player__button.toggle');
 const skipButtons = document.querySelectorAll('.skip');
 const volumeInput = document.querySelector('.volume');
 const playbackSpeedInput = document.querySelector('.playback-speed');
@@ -71,6 +71,7 @@ playbackSpeedInput.addEventListener('change', updatePlaybackSpeed);
 
 // Initial volume setup
 video.volume = volumeInput.value;
+
 
 </script>
 </body>
